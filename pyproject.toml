@@ -11,6 +11,7 @@ flask = "^3.0.3"
 flask-cors = "^4.0.1"
 requests = "^2.31.0"
 python-dotenv = "^1.0.1"
+lib-version-team11 = "^0.0.1"
 
 
 [build-system]

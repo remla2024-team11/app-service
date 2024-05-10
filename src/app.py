@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 from dotenv import load_dotenv
+from lib_version_team11 import VersionUtil
 
 load_dotenv()
 
@@ -30,6 +31,11 @@ def add_data():
             return jsonify({'message': 'Error adding data to the other API'}), response.status_code
     except Exception as e:
         return jsonify({'message': f'Error: {str(e)}'}), 400
+
+@app.route('/api/version', methods=['GET'])
+def getVersion():
+    version = VersionUtil.get_version()
+    return jsonify({'version': version})
 
 if __name__ == '__main__':
     app.run(debug=True)
