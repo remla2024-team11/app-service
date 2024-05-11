@@ -44,7 +44,7 @@ To run the project, follow these steps:
    docker-compose up
    ```
 
-   This command will start the project and make it accessible at http://localhost:5000.
+   This command will start the project and make it accessible at http://localhost:80.
 
 ### Stopping the Project
 
